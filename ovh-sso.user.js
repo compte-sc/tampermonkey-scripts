@@ -1,10 +1,14 @@
 // ==UserScript==
 // @name         Auto-fill OVH IDP Code
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Remplit automatiquement l'identifiant SSO OVH (5610-1147-08/idp) et clique sur Connexion
-// @author       Mathieu via ChatGPT
+// @author       Mathieu
 // @match        https://www.ovh.com/auth/*
+// @match        https://auth.eu.ovhcloud.com/signin/*
+// @match        https://auth.ovhcloud.com/signin/*
+// @match        https://auth.ca.ovhcloud.com/signin/*
+// @match        https://auth.us.ovhcloud.com/signin/*
 // @grant        none
 // ==/UserScript==
 
@@ -32,4 +36,5 @@
             console.warn("OVH SSO Auto-fill: l'input n'a pas été trouvé.");
         }
     }, INTERVAL);
+
 })();
